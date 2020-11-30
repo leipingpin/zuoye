@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人主页</title>
+    <style>
+        body{
+            margin: 10;
+            font-family: 宋体;
+        }
+        nav{
+            width: 100%;
+            height: 0px;
+            position: fixed;
+            top: 0;
+            background-color: rgb(30, 27, 31);
+            z-index: 1000;
+        }
+        nav div{
+            width: 1000px;
+            height: 1px;
+            margin:0 auto;
+        }
+        ul{
+            float: right;
+            margin: 1;
+            padding-left: 1;
+        }
+        li{
+            float: left;
+            list-style: none;
+            margin-right: 30px;
+        }
+        li a{
+            line-height: 114px;
+            text-decoration: none;
+            color: rgb(200, 8, 248);
+        }
+        li a:hover{
+            color: rgb(50, 142, 228);
+        }
+        #sy{
+            width: 50%;;
+        }
+        #header{
+            width: 1250px;
+        }
+        * {
+            margin: 0;
+            padding: 0
+        }
+
+
+    .from {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .bgc {
+            width: 1250px;
+            height: 700px;
+        }
+
+        .submit { 
+            position: absolute;
+            z-index: 9;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            margin-top: 106px;
+            width: 400px;
+            height: 400px;
+            background: rgba(123, 180, 128, 0.2);
+            border-radius: 10px;
+            color: rgb(136, 100, 100);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form_title {   
+            text-align: center;
+            margin-top: 40px;
+            font-size: 18px;
+        }
+
+        .form_input {
+            padding: 0 30px;
+            box-sizing: border-box;
+            display: flex;
+            margin-top: 20px;
+        }
+
+        .inputs {
+            height: 40px;
+            width: 300px;
+            border-radius: 5px;
+            border: none;
+            background-color: rgb(226, 219, 224);
+            color: #666;
+            padding-left: 20px;
+        }
+        .form_input span {
+            width: 85px;
+            align-self: center;
+        }
+
+        .btn_submit {
+            align-self: center;
+        }
+
+        .btn {
+            border: none;
+            width: 80px;
+            height: 40px;
+            color: #fff;
+            border-radius: 5px;
+            background: rgb(172, 73, 73);
+            margin-top: 40px;
+        }
+
+         .btn:hover {
+    background: #666;
+        }
+
+         .back {
+            margin-left: 10px;
+        }
+
+        .home_href {
+            border: none;
+            width: 80px;
+            height: 40px;
+            color: #fff;
+            border-radius: 5px;
+            background: #FFD204;
+        }
+        main {
+            width: 1250px;
+            margin:10 auto;
+        }
+        section > img {
+            width: 1250px;
+        }
+        p {
+            color: rgb(190, 224, 155);
+            text-indent: 2em;
+        }
+        h2 {
+            color: rgb(187, 89, 138);
+        }
+        #idou {
+            width: 1250px;
+            height: 730px;
+            background-image: url('7.jpg');
+            background-size: 22000px 1630px;
+            position: relative;
+        }
+        #idou img{
+            border:5px rgb(212, 190, 223) solid;
+            border-radius: 50%;
+            position: absolute;
+        }
+        #idou img:nth-child(1){
+            width: 200px;
+            top:0px;
+            left: 100px;
+        }
+        #idou img:nth-child(2){
+            width: 260px;
+            top: 200px;
+            left: 300px;
+        }
+        #idou img:nth-child(3){
+            width:300px;
+            top: 170px;
+            right:300px;
+        }
+        #idou img:nth-child(4){
+            width: 200px;
+            top: 390px;
+            right:300px;
+        }
+        #idou img:nth-child(5){
+            width:300px;
+            top: 400px;
+            right:900px;
+        }
+        #idou img:nth-child(6){
+            width: 200px;
+            top: 300px;
+            right: 0px;
+        }
+        #idou img:nth-child(7){
+            width: 300px;
+            top: 0px;
+            right: 0px;
+        }
+        #idou img:nth-child(8){
+            width: 300px;
+            top: 0px;
+            right: 500px;
+        }
+        #idou img:nth-child(9){
+            width: 200px;
+            top: 400px;
+            right: 620px;
+        }
+        #hometown {
+            width: 1250px;
+            height: 730px;
+            background-image: url('9.jpg');
+            background-size: 2200px 530px;
+            position: relative;
+        }
+        #hometown img{
+            border:2px rgb(91, 197, 153) solid;
+            border-radius: 100%;
+            position: absolute;
+        }
+        #hometown img:nth-child(1){
+            width: 360px;
+            top:50px;
+            left: 750px;
+        }
+        #hometown img:nth-child(2){
+            width: 360px;
+            top:170px;
+            left: 750px;
+        }
+        #hometown img:nth-child(3){
+            width: 360px;
+            top: 290px;
+            left: 750px;
+        }
+        #hometown img:nth-child(4){
+            width: 700px;
+            top: 90px;
+            left: 0px;
+        }
+        #book {
+            width: 1250px;
+            height: 730px;
+            background-color: rgb(243, 242, 241);
+            background-size: 22000px 1630px;
+            position: relative;
+        }
+        #book img:nth-child(1){
+            width: 150px;
+            top:0px;
+            left: 0px;
+        }
+        #book img:nth-child(2){
+            width: 200px;
+            top: 100px;
+            left:100px;
+        }
+        #book img:nth-child(3){
+            width:200px;
+            top: 190px;
+            right:200px;
+        }
+        #book img:nth-child(4){
+            width: 200px;
+            top: 500px;
+            right:0px;
+        }
+        #book img:nth-child(5){
+            width:200px;
+            top: 100px;
+            right:300px;
+        }
+        #book img:nth-child(6){
+            width: 200px;
+            top: 500px;
+            right:5 0px;
+        }
+        #book img:nth-child(7){
+            width: 170px;
+            height: 195px ;
+            top:0px;
+            left: 0px;
+        }
+        #book img:nth-child(8){
+            width: 160px;
+            top: 100px;
+            left:100px;
+        }
+        #book img:nth-child(9){
+            width:200px;
+            top: 190px;
+            right:200px;
+        }
+        #book img:nth-child(10){
+            width: 200px;
+            top: 500px;
+            right:0px;
+        }
+        #book img:nth-child(11){
+            width:200px;
+            top: 100px;
+            right:300px;
+        }
+        #book img:nth-child(12){
+            width: 220px;
+            top: 500px;
+            right:5 0px;
+        }
+        .music_img {
+    position: fixed;
+    bottom: 500px;
+    right: 1230px;
+    width: 50px;
+    height: 50px;
+    top: 500px;
+    animation: muscis 5s linear infinite;
+    border-radius: 100%;
+}
+
+@keyframes muscis {
+    from {
+        transform: rotate (0deg);
+        opacity: .6;
+    }
+    to {
+        transform: rotate(360deg);
+        opacity: .8;
+    }
+}
+    </style>
+   
+
+</head>
+<body>
+    <nav>
+        <div>
+            <ul>  
+                <li><a href="#sy">首页</a></li>
+                <li><a href="#header">关于我</a></li>
+                <li><a href="#idou">无法抵抗</a></li>
+                <li><a href="#hometown">我的家乡</a></li>
+                <li><a href="#book">最爱的书</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section id="sy"> 
+        <img src="D:\nginx-1.18.0\html\999.jpg" alt="999.jpg ">
+    </section>
+
+    <section id="header">
+    <div class="from">
+        <img class="bgc" src="88.jpg" alt="">
+        <div class="submit">
+            <span class="form_title">个人介绍</span>
+            <div class="form_input">
+                <span>姓名：</span>
+                <input class="inputs" type="text" value="雷娉嫔">
+            </div>
+            <div class="form_input">
+                <span>班级:</span>
+                <input class="inputs" type="text" value="通信1901">
+            </div>
+            <div class="form_input">
+                <span>学号：</span>
+                <input class="inputs" type="text" value="201916180108">
+            </div>
+            <div class="form_input">
+                <span>爱好：</span>
+                <input class="inputs" type="text" value="看书">
+            </div>
+            <div class="form_input">
+            <span>自我评价：</span>
+            <input class="inputs" type="text" value="一级颜控，干啥啥不行吃饭第一名">
+        </div>
+        </div>
+        </div>
+    </div>
+</section>
+        <section id="idou">
+            <h2>无法抵抗</h2>
+            <div id="idou">
+                <img src="11.jpg" alt="">
+                <img src="12.jpg" alt="">
+                <img src="13.jpg" alt="">
+                <img src="55.jpg" alt="">
+                <img src="23.jpg" alt="">
+                <img src="26.jpg" alt="">
+                <img src="75.jpg" alt="">
+                <img src="71.jpg" alt="">
+                <img src="73.jpg" alt="">
+            </div>
+        </section>
+ 
+        <section id="hometown">
+            <h2>我的家乡——重庆</h2><span></span>
+            <div id="hometown">
+                <img src="68.jpg" alt="">
+                <img src="69.jpg" alt="">
+                <img src="67.jpg" alt="">
+                <img src="95.jpg" alt="">
+            </div>
+        </section>
+        <section id="book">
+            <h2>那些年我读过的念念不忘的书</h2><span></span>
+            <div id="book">
+                <img src="111.jpg" alt="">
+                <img src="112.jpg" alt="">
+                <img src="113.jpg" alt="">
+                <img src="114.jpg" alt="">
+                <img src="115.jpg" alt="">
+                <img src="116.jpg" alt="">
+                <img src="117.jpg" alt="">
+                <img src="118.jpg" alt="">
+                <img src="119.jpg" alt="">
+                <img src="220.jpg" alt="">
+                <img src="221.jpg" alt="">
+                <img src="22.jpg" alt="">
+            </div>
+        </section>
+        <img class="music_img" src="991.jpg" alt="">
+</body>
+</html>
+            
